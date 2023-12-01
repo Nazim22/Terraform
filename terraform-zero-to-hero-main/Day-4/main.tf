@@ -2,14 +2,14 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_instance" "abhishek" {
-  instance_type = "t2.micro"
-  ami = "ami-053b0d53c279acc90" # change this
-  subnet_id = "subnet-019ea91ed9b5252e7" # change this
+resource "aws_instance" "example-demo" {
+ami_value = "ami-0fc5d935ebf8bc3bc"
+instance_type_value = "t2.micro"
+subnet_id_value = "subnet-0e490005a4f039843"
 }
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "abhishek-s3-demo-xyz" # change this
+  bucket = "s3-demo-xyz" # change this
 }
 
 resource "aws_dynamodb_table" "terraform_lock" {
